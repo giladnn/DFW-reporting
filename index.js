@@ -2,6 +2,7 @@
 const CDP = require('chrome-remote-interface');
 const fs = require('fs');
 const path = require('path');
+
 let host = process.argv[2];
 let currentTime = Date.now().toString();
 // foreach reporting create a dir and path variable
