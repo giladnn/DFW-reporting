@@ -5,14 +5,15 @@ const path = require('path');
 const queryString = require('query-string');
 
 let host = process.argv[2];
+let mainFolder = process.argv[3] || 'logger';
 var d = new Date();
 
 let currentTime = [d.toDateString(),d.getHours(),d.getMinutes(),d.getSeconds()].join('_');
 // foreach reporting create a dir and path variable
-let pathToConsoleLogger = path.join(process.cwd(), currentTime, 'Logger');
-let pathToNielsen = path.join(process.cwd(), currentTime, 'nielsen');
-let pathToAdobe = path.join(process.cwd(), currentTime, 'adobe');
-let pathToNewrelic = path.join(process.cwd(), currentTime, 'newrelic');
+let pathToConsoleLogger = path.join(process.cwd(),mainFolder, currentTime, 'Logger');
+let pathToNielsen = path.join(process.cwd(),mainFolder, currentTime, 'nielsen');
+let pathToAdobe = path.join(process.cwd(),mainFolder, currentTime, 'adobe');
+let pathToNewrelic = path.join(process.cwd(),mainFolder, currentTime, 'newrelic');
 
 
 if (!fs.existsSync(path.join(process.cwd(), currentTime))){
