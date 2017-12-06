@@ -7,33 +7,17 @@ const queryString = require('query-string');
 let host = process.argv[2];
 let currentTime = Date.now().toString();
 // foreach reporting create a dir and path variable
+let pathToConsoleLogger = path.join(process.cwd(), currentTime, 'Logger');
 let pathToNielsen = path.join(process.cwd(), currentTime, 'nielsen');
 let pathToAdobe = path.join(process.cwd(), currentTime, 'adobe');
 let pathToNewrelic = path.join(process.cwd(), currentTime, 'newrelic');
 
+
 if (!fs.existsSync(path.join(process.cwd(), currentTime))){
     fs.mkdirSync( path.join(process.cwd(), currentTime));
 }
-// if (!fs.existsSync(path.join(process.cwd(), currentTime))){
-//     fs.mkdirSync( path.join(process.cwd(), currentTime));
-// }
-// if (!fs.existsSync(pathToNielsen)){
-//     fs.mkdirSync(pathToNielsen);
-// }
-// if (!fs.existsSync(pathToAdobe)){
-//     fs.mkdirSync(pathToAdobe);
-// }
-// if (!fs.existsSync(pathToNewrelic)){
-//     fs.mkdirSync(pathToNewrelic);
-// }
 
-
-// fs.mkdirSync(pathToNielsen);
-// fs.mkdirSync(pathToAdobe);
-// fs.mkdirSync(pathToNewrelic);
-
-// var wstream = fs.createWriteStream(pathToNielsen+'.txt');
-
+ let wstreamConsoleLogger = fs.createWriteStream(pathToConsoleLogger+'.txt');
  let wstreamNielsen = fs.createWriteStream(pathToNielsen+'.txt');
  let wstreamAdobe = fs.createWriteStream(pathToAdobe+'.txt');
  let wstreamNewrelic = fs.createWriteStream(pathToNewrelic+'.txt');
@@ -41,7 +25,12 @@ if (!fs.existsSync(path.join(process.cwd(), currentTime))){
 CDP({ host }, (client) => {
     let currentJsonRequest;
     // extract domains
-    const { Network } = client;
+    const { Network,Runtime } = client;
+    Runtime.consoleAPICalled((params) => {
+        wstreamConsoleLogger.write(JSON.stringify(params));
+        wstreamConsoleLogger.write("\r\n")
+    });
+
     // setup handlers
     Network.requestWillBeSent((params) => {
         if((params.request.url).indexOf('imr') >= 0){
@@ -51,21 +40,12 @@ CDP({ host }, (client) => {
                 wstreamNielsen.write(key +' : '+currentJsonRequest[key]);
                 wstreamNielsen.write("\r\n")
             }
-            // wstreamNielsen.write(JSON.stringify(params.request.url).toString())
-            // wstreamNielsen.write(queryString.parse(JSON.stringify(params.request.url)).toString());
-            // console.log(queryString.parse(params.request.url));
         }else if((params.request.url).indexOf('s:asset') >= 0){
             wstreamAdobe.write("------------------------------------- \r\n")
-            // wstreamAdobe.write(JSON.stringify(params.request.url).toString())
-            // wstreamAdobe.write(queryString.parse(JSON.stringify(params.request.url)).toString());
-            // console.log(queryString.parse(params.request.url));
             currentJsonRequest=queryString.parse(JSON.stringify(params.request.url));
             for (var key in currentJsonRequest) {
-            // wstreamAdobe.write(queryString.parse(JSON.stringify(params.request.url)).toString());
                 wstreamAdobe.write(key +' : '+currentJsonRequest[key]);
                 wstreamAdobe.write("\r\n")
-                // console.log(key);
-                // console.log(JsonObj[key]);
             }
 
         }else if((params.request.url).indexOf('bam') >= 0){
@@ -74,17 +54,11 @@ CDP({ host }, (client) => {
             for (var key in currentJsonRequest) {
                 wstreamNewrelic.write(key +' : '+currentJsonRequest[key]);
                 wstreamNewrelic.write("\r\n")
-                // console.log(key);
-                // console.log(JsonObj[key]);
             }
-            // wstreamNewrelic.write(JSON.stringify(params.request.url).toString())
-            // wstreamNewrelic.write(queryString.parse(JSON.stringify(params.request.url)).toString());
-            console.log(queryString.parse(params.request.url));
-            // console.log(params.request.url);
         }
     });
     Promise.all([
-        Network.enable()
+        Network.enable(),Runtime.enable()
     ]).then(() => {
         // return Page.navigate({url: 'https://github.com'});
         return;
