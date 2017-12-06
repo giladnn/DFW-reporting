@@ -18,6 +18,8 @@ let pathToNewrelic = path.join(process.cwd(),mainFolder, currentTime, 'newrelic'
 
 if (!fs.existsSync(path.join(process.cwd(), mainFolder))){
     fs.mkdirSync( path.join(process.cwd(), mainFolder));
+}
+if (!fs.existsSync(path.join(process.cwd(), mainFolder, currentTime))){
     fs.mkdirSync( path.join(process.cwd(), mainFolder, currentTime));
 }
 
