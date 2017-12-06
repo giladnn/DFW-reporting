@@ -33,7 +33,7 @@ CDP({ host }, (client) => {
     // extract domains
     const { Network,Runtime } = client;
     Runtime.consoleAPICalled((params) => {
-        wstreamConsoleLogger.write(JSON.stringify(params));
+        wstreamConsoleLogger.write(JSON.stringify(params.args));
         wstreamConsoleLogger.write("\r\n")
     });
 
