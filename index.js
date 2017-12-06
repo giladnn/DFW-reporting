@@ -5,7 +5,9 @@ const path = require('path');
 const queryString = require('query-string');
 
 let host = process.argv[2];
-let currentTime = Date.now().toString();
+var d = new Date();
+
+let currentTime = d.toDateString() +" "+d.getHours()+"_"+d.getMinutes()+"_"+d.getSeconds();
 // foreach reporting create a dir and path variable
 let pathToConsoleLogger = path.join(process.cwd(), currentTime, 'Logger');
 let pathToNielsen = path.join(process.cwd(), currentTime, 'nielsen');
