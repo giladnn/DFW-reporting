@@ -1,13 +1,13 @@
 {
   "name": "dfw-reporting-logger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "bin": {
     "dfw-reporting": "./reporter"
   },
   "main": "index.js",
   "scripts": {
-    "prepublish" : ""
+    "prepublish": ""
   },
   "keywords": [],
   "author": "",
