@@ -16,8 +16,9 @@ let pathToAdobe = path.join(process.cwd(),mainFolder, currentTime, 'adobe');
 let pathToNewrelic = path.join(process.cwd(),mainFolder, currentTime, 'newrelic');
 
 
-if (!fs.existsSync(path.join(process.cwd(), currentTime))){
-    fs.mkdirSync( path.join(process.cwd(), currentTime));
+if (!fs.existsSync(path.join(process.cwd(), mainFolder))){
+    fs.mkdirSync( path.join(process.cwd(), mainFolder));
+    fs.mkdirSync( path.join(process.cwd(), mainFolder, currentTime));
 }
 
  let wstreamConsoleLogger = fs.createWriteStream(pathToConsoleLogger+'.txt');
