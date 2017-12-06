@@ -11,6 +11,9 @@ let pathToNielsen = path.join(process.cwd(), currentTime, 'nielsen');
 let pathToAdobe = path.join(process.cwd(), currentTime, 'adobe');
 let pathToNewrelic = path.join(process.cwd(), currentTime, 'newrelic');
 
+if (!fs.existsSync(path.join(process.cwd(), currentTime))){
+    fs.mkdirSync( path.join(process.cwd(), currentTime));
+}
 // if (!fs.existsSync(path.join(process.cwd(), currentTime))){
 //     fs.mkdirSync( path.join(process.cwd(), currentTime));
 // }
@@ -36,20 +39,46 @@ let pathToNewrelic = path.join(process.cwd(), currentTime, 'newrelic');
  let wstreamNewrelic = fs.createWriteStream(pathToNewrelic+'.txt');
 
 CDP({ host }, (client) => {
-
+    let currentJsonRequest;
     // extract domains
     const { Network } = client;
     // setup handlers
     Network.requestWillBeSent((params) => {
         if((params.request.url).indexOf('imr') >= 0){
-            wstreamNielsen.write('Hello')
-            console.log(queryString.parse(params.request.url));
-        }else if((params.request.url).indexOf('bam') >= 0){
-            wstreamNielsen.write('Hello')
-            console.log(queryString.parse(params.request.url));
-
+            wstreamNielsen.write("------------------------------------- \r\n");
+            currentJsonRequest=queryString.parse(JSON.stringify(params.request.url));
+            for (var key in currentJsonRequest) {
+                wstreamNielsen.write(key +' : '+currentJsonRequest[key]);
+                wstreamNielsen.write("\r\n")
+            }
+            // wstreamNielsen.write(JSON.stringify(params.request.url).toString())
+            // wstreamNielsen.write(queryString.parse(JSON.stringify(params.request.url)).toString());
+            // console.log(queryString.parse(params.request.url));
         }else if((params.request.url).indexOf('s:asset') >= 0){
-            wstreamNielsen.write('Hello')
+            wstreamAdobe.write("------------------------------------- \r\n")
+            // wstreamAdobe.write(JSON.stringify(params.request.url).toString())
+            // wstreamAdobe.write(queryString.parse(JSON.stringify(params.request.url)).toString());
+            // console.log(queryString.parse(params.request.url));
+            currentJsonRequest=queryString.parse(JSON.stringify(params.request.url));
+            for (var key in currentJsonRequest) {
+            // wstreamAdobe.write(queryString.parse(JSON.stringify(params.request.url)).toString());
+                wstreamAdobe.write(key +' : '+currentJsonRequest[key]);
+                wstreamAdobe.write("\r\n")
+                // console.log(key);
+                // console.log(JsonObj[key]);
+            }
+
+        }else if((params.request.url).indexOf('bam') >= 0){
+            wstreamNewrelic.write("------------------------------------- \r\n")
+            currentJsonRequest=queryString.parse(JSON.stringify(params.request.url));
+            for (var key in currentJsonRequest) {
+                wstreamNewrelic.write(key +' : '+currentJsonRequest[key]);
+                wstreamNewrelic.write("\r\n")
+                // console.log(key);
+                // console.log(JsonObj[key]);
+            }
+            // wstreamNewrelic.write(JSON.stringify(params.request.url).toString())
+            // wstreamNewrelic.write(queryString.parse(JSON.stringify(params.request.url)).toString());
             console.log(queryString.parse(params.request.url));
             // console.log(params.request.url);
         }

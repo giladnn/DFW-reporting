@@ -1,0 +1,342 @@
+------------------------------------- 
+"https://att.hb.omtrdc.net/?s:sc:rsid : attentdev
+h:sc:ssl : 1
+l:asset:length : 2520
+l:event:duration : 0
+l:event:playhead : 17
+l:event:prev_ts : -1
+l:event:ts : 1512554945835
+l:sp:hb_api_lvl : 4
+l:stream:bitrate : 1329001
+l:stream:dropped_frames : 0
+l:stream:fps : 24
+l:stream:startup_time : -1000
+s:asset:name : Pretty Little Liars
+s:asset:publisher : 55633F7A534535110A490D44@AdobeOrg
+s:asset:type : main
+s:asset:video_id : B002432368U3
+s:event:sid : 1512554945803248161369
+s:event:type : start
+s:meta:a.contentType : VOD
+s:meta:a.media.airDate : 20170530 03:00:00
+s:meta:a.media.asset : EP012647200168
+s:meta:a.media.channel : NA
+s:meta:a.media.episode : 16"
+s:meta:a.media.format : 1
+s:meta:a.media.friendlyName : Pretty Little Liars
+s:meta:a.media.genre : Drama
+s:meta:a.media.length : 2520
+s:meta:a.media.name : EP012647200168
+s:meta:a.media.network : Freeform
+s:meta:a.media.playerName : SHAKA
+s:meta:a.media.season : 7
+s:meta:a.media.show : The Glove That Rocks the Cradle
+s:meta:a.media.vhlVersion : 2.0.1
+s:meta:a.media.view : true
+s:meta:att.device.appname : Chromecast app
+s:meta:att.device.platform : TV|ConDev|Chrome OS
+s:meta:att.media.access : MVPD
+s:meta:att.media.channelcallsign : NA
+s:meta:att.media.channelid : NA
+s:meta:att.media.channelname : NA
+s:meta:att.media.channelnum : NA
+s:meta:att.media.contentid : B002432368U3
+s:meta:att.media.episodename : The Glove That Rocks the Cradle
+s:meta:att.media.episodenum : 16
+s:meta:att.media.gated : true
+s:meta:att.media.name : Pretty Little Liars
+s:meta:att.media.network : Freeform
+s:meta:att.media.playername : SHAKA
+s:meta:att.media.programmer : Disney
+s:meta:att.media.seasonnum : 7
+s:meta:att.media.starttype : First Start
+s:meta:att.media.streamtype : CDN
+s:meta:att.media.tmsid : EP012647200168
+s:meta:att.visitor.type : SubDTVNow
+s:sc:tracking_server : smetrics.att.com
+s:sp:channel : NA
+s:sp:hb_version : js-2.0.1.88-c8c0b1
+s:sp:ovp : DFW
+s:sp:player_name : SHAKA
+s:sp:sdk : 2.0.1
+s:stream:type : vod
+------------------------------------- 
+"https://att.hb.omtrdc.net/?s:sc:rsid : attentdev
+h:sc:ssl : 1
+l:asset:length : 2520
+l:event:duration : 0
+l:event:playhead : 0
+l:event:prev_ts : -1
+l:event:ts : 1512554946265
+l:sp:hb_api_lvl : 4
+l:stream:bitrate : 1329001
+l:stream:dropped_frames : 0
+l:stream:fps : 24
+l:stream:startup_time : -1000"
+s:asset:name : Pretty Little Liars
+s:asset:publisher : 55633F7A534535110A490D44@AdobeOrg
+s:asset:type : main
+s:asset:video_id : B002432368U3
+s:event:sid : 1512554945803248161369
+s:event:type : aa_start
+s:sc:tracking_server : smetrics.att.com
+s:sp:channel : NA
+s:sp:hb_version : js-2.0.1.88-c8c0b1
+s:sp:ovp : DFW
+s:sp:player_name : SHAKA
+s:sp:sdk : 2.0.1
+s:stream:type : vod
+------------------------------------- 
+"https://att.hb.omtrdc.net/?s:sc:rsid : attentdev
+h:sc:ssl : 1
+l:asset:length : 2520
+l:event:duration : 10269
+l:event:playhead : 2
+l:event:prev_ts : 1512554945835
+l:event:ts : 1512554956104
+l:sp:hb_api_lvl : 4
+l:stream:bitrate : 765002
+l:stream:dropped_frames : 0
+l:stream:fps : 24
+l:stream:startup_time : -1000
+s:asset:name : Pretty Little Liars
+s:asset:publisher : 55633F7A534535110A490D44@AdobeOrg
+s:asset:type : main
+s:asset:video_id : B002432368U3
+s:event:sid : 1512554945803248161369
+s:event:type : start
+s:meta:a.contentType : VOD
+s:meta:a.media.airDate : 20170530 03:00:00
+s:meta:a.media.asset : EP012647200168
+s:meta:a.media.channel : NA
+s:meta:a.media.episode : 16"
+s:meta:a.media.format : 1
+s:meta:a.media.friendlyName : Pretty Little Liars
+s:meta:a.media.genre : Drama
+s:meta:a.media.length : 2520
+s:meta:a.media.name : EP012647200168
+s:meta:a.media.network : Freeform
+s:meta:a.media.playerName : SHAKA
+s:meta:a.media.season : 7
+s:meta:a.media.show : The Glove That Rocks the Cradle
+s:meta:a.media.vhlVersion : 2.0.1
+s:meta:a.media.view : true
+s:meta:att.device.appname : Chromecast app
+s:meta:att.device.platform : TV|ConDev|Chrome OS
+s:meta:att.media.access : MVPD
+s:meta:att.media.channelcallsign : NA
+s:meta:att.media.channelid : NA
+s:meta:att.media.channelname : NA
+s:meta:att.media.channelnum : NA
+s:meta:att.media.contentid : B002432368U3
+s:meta:att.media.episodename : The Glove That Rocks the Cradle
+s:meta:att.media.episodenum : 16
+s:meta:att.media.gated : true
+s:meta:att.media.name : Pretty Little Liars
+s:meta:att.media.network : Freeform
+s:meta:att.media.playername : SHAKA
+s:meta:att.media.programmer : Disney
+s:meta:att.media.seasonnum : 7
+s:meta:att.media.starttype : First Start
+s:meta:att.media.streamtype : CDN
+s:meta:att.media.tmsid : EP012647200168
+s:meta:att.visitor.type : SubDTVNow
+s:sc:tracking_server : smetrics.att.com
+s:sp:channel : NA
+s:sp:hb_version : js-2.0.1.88-c8c0b1
+s:sp:ovp : DFW
+s:sp:player_name : SHAKA
+s:sp:sdk : 2.0.1
+s:stream:type : vod
+------------------------------------- 
+"https://att.hb.omtrdc.net/?s:sc:rsid : attentdev
+h:sc:ssl : 1
+l:asset:length : 2520
+l:event:duration : 3757
+l:event:playhead : 0
+l:event:prev_ts : 1512554956104
+l:event:ts : 1512554959861
+l:sp:hb_api_lvl : 4
+l:stream:bitrate : 765002
+l:stream:dropped_frames : 0
+l:stream:fps : 24
+l:stream:startup_time : -1000
+s:asset:name : Pretty Little Liars
+s:asset:publisher : 55633F7A534535110A490D44@AdobeOrg
+s:asset:type : main
+s:asset:video_id : B002432368U3
+s:event:sid : 1512554945803248161369
+s:event:type : start
+s:meta:a.contentType : VOD
+s:meta:a.media.airDate : 20170530 03:00:00
+s:meta:a.media.asset : EP012647200168
+s:meta:a.media.channel : NA
+s:meta:a.media.episode : 16"
+s:meta:a.media.format : 1
+s:meta:a.media.friendlyName : Pretty Little Liars
+s:meta:a.media.genre : Drama
+s:meta:a.media.length : 2520
+s:meta:a.media.name : EP012647200168
+s:meta:a.media.network : Freeform
+s:meta:a.media.playerName : SHAKA
+s:meta:a.media.season : 7
+s:meta:a.media.show : The Glove That Rocks the Cradle
+s:meta:a.media.vhlVersion : 2.0.1
+s:meta:a.media.view : true
+s:meta:att.device.appname : Chromecast app
+s:meta:att.device.platform : TV|ConDev|Chrome OS
+s:meta:att.media.access : MVPD
+s:meta:att.media.channelcallsign : NA
+s:meta:att.media.channelid : NA
+s:meta:att.media.channelname : NA
+s:meta:att.media.channelnum : NA
+s:meta:att.media.contentid : B002432368U3
+s:meta:att.media.episodename : The Glove That Rocks the Cradle
+s:meta:att.media.episodenum : 16
+s:meta:att.media.gated : true
+s:meta:att.media.name : Pretty Little Liars
+s:meta:att.media.network : Freeform
+s:meta:att.media.playername : SHAKA
+s:meta:att.media.programmer : Disney
+s:meta:att.media.seasonnum : 7
+s:meta:att.media.starttype : First Start
+s:meta:att.media.streamtype : CDN
+s:meta:att.media.tmsid : EP012647200168
+s:meta:att.visitor.type : SubDTVNow
+s:sc:tracking_server : smetrics.att.com
+s:sp:channel : NA
+s:sp:hb_version : js-2.0.1.88-c8c0b1
+s:sp:ovp : DFW
+s:sp:player_name : SHAKA
+s:sp:sdk : 2.0.1
+s:stream:type : vod
+------------------------------------- 
+"https://att.hb.omtrdc.net/?s:sc:rsid : attentdev
+h:sc:ssl : 1
+l:asset:length : 2520
+l:event:duration : 0
+l:event:playhead : 0
+l:event:prev_ts : -1
+l:event:ts : 1512554959860
+l:sp:hb_api_lvl : 4
+l:stream:bitrate : 765002
+l:stream:dropped_frames : 0
+l:stream:fps : 24
+l:stream:startup_time : -1000"
+s:asset:name : Pretty Little Liars
+s:asset:publisher : 55633F7A534535110A490D44@AdobeOrg
+s:asset:type : main
+s:asset:video_id : B002432368U3
+s:event:sid : 1512554945803248161369
+s:event:type : play
+s:sc:tracking_server : smetrics.att.com
+s:sp:channel : NA
+s:sp:hb_version : js-2.0.1.88-c8c0b1
+s:sp:ovp : DFW
+s:sp:player_name : SHAKA
+s:sp:sdk : 2.0.1
+s:stream:type : vod
+------------------------------------- 
+"https://att.hb.omtrdc.net/?s:sc:rsid : attentdev
+h:sc:ssl : 1
+l:asset:length : 2520
+l:event:duration : 10078
+l:event:playhead : 9
+l:event:prev_ts : 1512554959860
+l:event:ts : 1512554969938
+l:sp:hb_api_lvl : 4
+l:stream:bitrate : 765002
+l:stream:dropped_frames : 0
+l:stream:fps : 24
+l:stream:startup_time : -1000"
+s:asset:name : Pretty Little Liars
+s:asset:publisher : 55633F7A534535110A490D44@AdobeOrg
+s:asset:type : main
+s:asset:video_id : B002432368U3
+s:event:sid : 1512554945803248161369
+s:event:type : play
+s:sc:tracking_server : smetrics.att.com
+s:sp:channel : NA
+s:sp:hb_version : js-2.0.1.88-c8c0b1
+s:sp:ovp : DFW
+s:sp:player_name : SHAKA
+s:sp:sdk : 2.0.1
+s:stream:type : vod
+------------------------------------- 
+"https://att.hb.omtrdc.net/?s:sc:rsid : attentdev
+h:sc:ssl : 1
+l:asset:length : 2520
+l:event:duration : 10078
+l:event:playhead : 9
+l:event:prev_ts : -1
+l:event:ts : 1512554980015
+l:sp:hb_api_lvl : 4
+l:stream:bitrate : 2385002
+l:stream:dropped_frames : 0
+l:stream:fps : 24
+l:stream:startup_time : -1000"
+s:asset:name : Pretty Little Liars
+s:asset:publisher : 55633F7A534535110A490D44@AdobeOrg
+s:asset:type : main
+s:asset:video_id : B002432368U3
+s:event:sid : 1512554945803248161369
+s:event:type : stall
+s:sc:tracking_server : smetrics.att.com
+s:sp:channel : NA
+s:sp:hb_version : js-2.0.1.88-c8c0b1
+s:sp:ovp : DFW
+s:sp:player_name : SHAKA
+s:sp:sdk : 2.0.1
+s:stream:type : vod
+------------------------------------- 
+"https://att.hb.omtrdc.net/?s:sc:rsid : attentdev
+h:sc:ssl : 1
+l:asset:length : 2520
+l:event:duration : 9614
+l:event:playhead : 9
+l:event:prev_ts : 1512554980015
+l:event:ts : 1512554989629
+l:sp:hb_api_lvl : 4
+l:stream:bitrate : 2385002
+l:stream:dropped_frames : 0
+l:stream:fps : 24
+l:stream:startup_time : -1000"
+s:asset:name : Pretty Little Liars
+s:asset:publisher : 55633F7A534535110A490D44@AdobeOrg
+s:asset:type : main
+s:asset:video_id : B002432368U3
+s:event:sid : 1512554945803248161369
+s:event:type : stall
+s:sc:tracking_server : smetrics.att.com
+s:sp:channel : NA
+s:sp:hb_version : js-2.0.1.88-c8c0b1
+s:sp:ovp : DFW
+s:sp:player_name : SHAKA
+s:sp:sdk : 2.0.1
+s:stream:type : vod
+------------------------------------- 
+"https://att.hb.omtrdc.net/?s:sc:rsid : attentdev
+h:sc:ssl : 1
+l:asset:length : 2520
+l:event:duration : 0
+l:event:playhead : 9
+l:event:prev_ts : 1512554969938
+l:event:ts : 1512554989629
+l:sp:hb_api_lvl : 4
+l:stream:bitrate : 2385002
+l:stream:dropped_frames : 0
+l:stream:fps : 24
+l:stream:startup_time : -1000"
+s:asset:name : Pretty Little Liars
+s:asset:publisher : 55633F7A534535110A490D44@AdobeOrg
+s:asset:type : main
+s:asset:video_id : B002432368U3
+s:event:sid : 1512554945803248161369
+s:event:type : play
+s:sc:tracking_server : smetrics.att.com
+s:sp:channel : NA
+s:sp:hb_version : js-2.0.1.88-c8c0b1
+s:sp:ovp : DFW
+s:sp:player_name : SHAKA
+s:sp:sdk : 2.0.1
+s:stream:type : vod
