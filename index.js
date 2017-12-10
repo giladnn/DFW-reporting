@@ -14,6 +14,8 @@ let pathToConsoleLogger = path.join(process.cwd(),mainFolder, currentTime, 'Logg
 let pathToNielsen = path.join(process.cwd(),mainFolder, currentTime, 'nielsen');
 let pathToAdobe = path.join(process.cwd(),mainFolder, currentTime, 'adobe');
 let pathToNewrelic = path.join(process.cwd(),mainFolder, currentTime, 'newrelic');
+let pathToComscore = path.join(process.cwd(),mainFolder, currentTime, 'comescore');
+
 
 
 if (!fs.existsSync(path.join(process.cwd(), mainFolder))){
@@ -27,6 +29,8 @@ if (!fs.existsSync(path.join(process.cwd(), mainFolder, currentTime))){
  let wstreamNielsen = fs.createWriteStream(pathToNielsen+'.txt');
  let wstreamAdobe = fs.createWriteStream(pathToAdobe+'.txt');
  let wstreamNewrelic = fs.createWriteStream(pathToNewrelic+'.txt');
+ let wstreamComScore = fs.createWriteStream(pathToComscore+'.txt');
+
 
 CDP({ host }, (client) => {
     let currentJsonRequest;
@@ -55,6 +59,13 @@ CDP({ host }, (client) => {
             }
 
         }else if((params.request.url).indexOf('bam') >= 0){
+            wstreamNewrelic.write("------------------------------------- \r\n")
+            currentJsonRequest=queryString.parse(JSON.stringify(params.request.url));
+            for (var key in currentJsonRequest) {
+                wstreamNewrelic.write(key +' : '+currentJsonRequest[key]);
+                wstreamNewrelic.write("\r\n")
+            }
+        } else if((params.request.url).indexOf('score') >= 0){
             wstreamNewrelic.write("------------------------------------- \r\n")
             currentJsonRequest=queryString.parse(JSON.stringify(params.request.url));
             for (var key in currentJsonRequest) {
