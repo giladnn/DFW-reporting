@@ -10,6 +10,10 @@
     "prepublish": "npm version patch",
     "postpublish": "git push"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/giladnn/DFW-reporting.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
