@@ -1,6 +1,6 @@
 {
   "name": "dfw-reporting-logger",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "",
   "bin": {
     "dfw-reporting": "./reporter"
